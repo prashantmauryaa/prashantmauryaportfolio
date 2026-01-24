@@ -5,7 +5,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { CinematicSection } from "@/components/cinematic-section";
-import { portableTextToPlainText } from "@/lib/utils";
+import { resolvePath, portableTextToPlainText } from "@/lib/utils";
 import {
   getAuthorData,
   getEducation,
@@ -17,8 +17,8 @@ import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export const dynamic = "force-static";
-export const revalidate = 604800; // 1 week
+// export const dynamic = "force-static";
+// export const revalidate = 604800; // 1 week
 
 export default async function Page() {
   const [author, work, education, projects] = await Promise.all([
@@ -52,7 +52,7 @@ export default async function Page() {
               <Avatar className="size-28 border">
                 <AvatarImage
                   alt={author.name ?? ""}
-                  src={author.avatar?.asset?.url ?? ""}
+                  src={resolvePath(author.avatar?.asset?.url)}
                   className="object-cover"
                 />
                 <AvatarFallback>{author.initials}</AvatarFallback>
@@ -80,7 +80,7 @@ export default async function Page() {
             <BlurFade key={item._id} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <ResumeCard
                 key={item._id}
-                logoUrl={item.logo?.asset?.url ?? ""}
+                logoUrl={resolvePath(item.logo?.asset?.url)}
                 altText={item.company ?? ""}
                 title={item.company ?? ""}
                 subtitle={item.title ?? ""}
@@ -102,7 +102,7 @@ export default async function Page() {
               <ResumeCard
                 key={item._id}
                 href={item.url ?? ""}
-                logoUrl={item.logo?.asset?.url ?? ""}
+                logoUrl={resolvePath(item.logo?.asset?.url)}
                 altText={item.school ?? ""}
                 title={item.school ?? ""}
                 subtitle={item.degree ?? ""}
@@ -157,7 +157,7 @@ export default async function Page() {
                   title={project.title ?? ""}
                   description={project.description ?? []}
                   tags={project.technologies ?? []}
-                  image={project.image?.asset?.url ?? ""}
+                  image={resolvePath(project.image?.asset?.url)}
                   video={project.video ?? ""}
                   links={project.links ?? []}
                   href={project.links?.[0]?.url ?? ""}

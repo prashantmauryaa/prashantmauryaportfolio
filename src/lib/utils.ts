@@ -15,9 +15,9 @@ export const formatPeriod = (period: string) => {
     end === "Present"
       ? end
       : new Date(end).toLocaleString("en-US", {
-          month: "long",
-          year: "numeric",
-        });
+        month: "long",
+        year: "numeric",
+      });
   return `${startDate} - ${endDate}`;
 };
 
@@ -31,4 +31,9 @@ export function portableTextToPlainText(blocks: any[] = []): string {
       )
       .join(" ") ?? ""
   );
+}
+
+export function resolvePath(path: string | undefined): string {
+  if (!path) return "";
+  return path;
 }
