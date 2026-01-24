@@ -75,7 +75,7 @@ export interface Project {
 // Portfolio data
 export const AUTHOR: Author = {
   _id: "author-1",
-  name: "Prashnat Maurya",
+  name: "Prashant Maurya",
   initials: "PM",
   avatar: {
     asset: {
@@ -122,7 +122,7 @@ export const AUTHOR: Author = {
   social: {
     github: "https://github.com/prashantmauryaa",
     linkedin: "https://www.linkedin.com/in/prashantmauryaa/",
-    email: "mauryaprashnat270@gmail.com",
+    email: "mauryaprashant270@gmail.com",
   },
 };
 
