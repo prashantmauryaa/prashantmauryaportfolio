@@ -35,5 +35,10 @@ export function portableTextToPlainText(blocks: any[] = []): string {
 
 export function resolvePath(path: string | undefined): string {
   if (!path) return "";
-  return path;
+  if (path.startsWith("http")) return path;
+  const basePath = "/prashantmauryaportfolio";
+  if (path.startsWith("/")) {
+    return `${basePath}${path}`;
+  }
+  return `${basePath}/${path}`;
 }
