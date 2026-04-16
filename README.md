@@ -1,97 +1,148 @@
-# Modern Portfolio Website
+# ⚔️ Murim-Themed Portfolio
 
-A sleek, animated portfolio website built with Next.js 15 and Tailwind CSS. Features a beautiful UI with smooth animations, dark mode support, and a fully customizable frontend portfolio.
+<div align="center">
 
- an amazing tool for building beautiful UI components. Upgraded to Next.js 15 for a modern web experience.
+<!-- TODO: Add project logo (e.g., an icon related to the Murim theme) -->
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![GitHub stars](https://img.shields.io/github/stars/Wandering-Spirit-22/portfolio?style=for-the-badge)](https://github.com/Wandering-Spirit-22/portfolio/stargazers)
+
+**A personal Murim-themed portfolio website showcasing projects, skills, and experience, crafted with modern web technologies.**
+
+[Live Portfolio](https://wandering-spirit-22.github.io/portfolio/)
+
+</div>
+
+## 📖 Overview
+
+This repository hosts a captivating and dynamic personal portfolio website designed to showcase a developer's journey, expertise, and projects within a unique "Murim" (Korean martial arts fantasy) aesthetic. Built with a focus on modern web standards, this static site provides an engaging user experience, allowing visitors to explore the developer's work, understand their technical capabilities, and learn about their professional background. It serves as an interactive resume and a testament to front-end development skills.
 
 ## ✨ Features
 
-- **Modern Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Dark Mode**: Built-in dark mode support with system preference detection
-- **Animations**: Smooth animations and transitions using Framer Motion
-- **SEO Optimized**: Built-in SEO support with dynamic meta tags
-- **Type Safe**: Full TypeScript support throughout the codebase
-- **Static Data**: Easy-to-edit portfolio data in TypeScript files
-
-## 🚀 Quick Start
-
-1. Clone the repository or use this as a template for your portfolio
-
-2. Install pnpm if you haven't already:
-   `npm install -g pnpm`
-
-3. Install dependencies:
-   `pnpm install`
-
-4. Customize your portfolio data by editing `src/data/portfolio.ts` with your information
-
-5. Run the development server:
-   `pnpm dev`
-
-6. Open [http://localhost:3000](http://localhost:3000) in your browser
+-   **Murim-Themed Design**: Immersive visual and textual elements inspired by ancient martial arts fantasy, offering a unique personal brand.
+-   **Project Showcase**: Dedicated section to highlight key projects with descriptions and links to live demos or repositories.
+-   **Skills Matrix**: A clear representation of technical skills and proficiencies, categorized for easy comprehension.
+-   **Interactive Experience**: Engaging animations and smooth transitions, enhancing user interaction across different sections.
+-   **Responsive Layout**: Optimized for seamless viewing and interaction across various devices, from desktops to mobile phones.
+-   **Contact Section**: Easy-to-use contact form or direct links for communication.
+-   **Experience Timeline**: Detailed chronological breakdown of professional experience and education.
 
 ## 🛠️ Tech Stack
 
-- [Next.js 15](https://nextjs.org/) - React Framework
-- [TypeScript](https://www.typescriptlang.org/) - Type Safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Framer Motion](https://www.framer.com/motion/) - Animations
-- [Radix UI](https://www.radix-ui.com/) - UI Components
-- [Lucide Icons](https://lucide.dev/) - Icons
-- [next-themes](https://github.com/pacocoursey/next-themes) - Dark Mode
+**Frontend:**
 
-## 📝 Project Structure
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-src/
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-├── app/ # Next.js app router
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-├── components/ # React components
+**DevOps & Hosting:**
 
-├── data/ # Portfolio data
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 
-├── lib/ # Utility functions
+## 🚀 Quick Start
 
-└── types/ # TypeScript type definitions
+This project is a static website and does not require any complex build steps or server setup.
 
-## 🎨 Customization
+### Prerequisites
+-   A modern web browser (e.g., Chrome, Firefox, Safari, Edge).
 
-### Content Management
+### Installation
 
-All portfolio content can be customized by editing the data files in `src/data/portfolio.ts`. Update your personal information, work experience, projects, and skills directly in the TypeScript file.
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Wandering-Spirit-22/portfolio.git
+    cd portfolio
+    ```
 
-### Theme
+### Running Locally
 
-Colors and other theme variables can be customized in `src/app/globals.css`.
+1.  **Open `index.html`**
+    Simply open the `index.html` file in your preferred web browser.
+    ```bash
+    # On most systems, you can just
+    open index.html
+    # or navigate to the file in your explorer/finder and double-click it.
+    ```
 
-### Components
+2.  **Use a Local Server (Recommended for full functionality and CORS handling)**
+    For the best development experience and to avoid potential browser security restrictions (e.g., CORS for local file access), it is recommended to serve the files using a simple local HTTP server.
 
-The project uses a component-based architecture with [shadcn/ui](https://ui.shadcn.com/) as a base. All components are customizable and can be found in the `src/components` directory.
+    If you have Node.js installed, you can use `http-server`:
+    ```bash
+    # Install http-server globally if you haven't already
+    npm install -g http-server
 
-## 📄 License
+    # Navigate to the project root directory
+    cd portfolio
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+    # Start the server
+    http-server .
+    ```
+    Then, open your browser and visit `http://localhost:8080` (or the port specified by `http-server`).
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── index.html        # Main entry point for the website
+├── script.js         # Core JavaScript logic for interactivity and dynamic content
+└── styles.css        # Global CSS styling for the Murim theme and layout
+```
+
+## 🔧 Development
+
+Development primarily involves editing the HTML, CSS, and JavaScript files directly.
+-   **`index.html`**: Structure and content of your portfolio.
+-   **`styles.css`**: Visual design, layout, and Murim-themed aesthetics.
+-   **`script.js`**: Interactive elements, animations, and dynamic content manipulation.
+
+Changes made to these files can be seen by refreshing your browser if you're viewing `index.html` directly, or if using a local server, changes should reflect on refresh.
+
+## 🚀 Deployment
+
+This project is designed for easy deployment as a static website.
+
+-   **GitHub Pages**: The project is already configured for deployment via GitHub Pages, as indicated by the `homepage` URL in the repository metadata. Pushing changes to the `main` branch will automatically update the live site.
+    -   Live Demo: `https://wandering-spirit-22.github.io/portfolio/`
+
+-   **Other Static Hosting**: You can deploy this project to any static hosting service like Netlify, Vercel, or AWS S3 by simply uploading the `index.html`, `script.js`, and `styles.css` files.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions to enhance this portfolio! Whether it's improving the theme, adding new features, or fixing bugs, your input is valuable.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### How to Contribute
+
+1.  **Fork the repository.**
+2.  **Create a new branch** (`git checkout -b feature/your-feature-name`).
+3.  **Make your changes and commit them** (`git commit -m 'feat: Add new feature'`).
+4.  **Push to the branch** (`git push origin feature/your-feature-name`).
+5.  **Open a Pull Request** describing your changes.
+
+Please ensure your code adheres to the existing styling and structure.
+
+## 📄 License
+
+This project currently have a Mit license. 
 
 ## 🙏 Acknowledgments
 
-- [Dillion Verma](https://github.com/dillionverma) for the original template and UI design
-- [Magic UI](https://magicui.design/) for inspiring beautiful UI components
-- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
-- [Vercel](https://vercel.com/) for hosting and deployment
+-   Inspired by the rich aesthetics of Murim fantasy.
 
+## 📞 Support & Contact
+
+If you have any questions, suggestions, or encounter issues, please feel free to:
+
+-   🐛 Open an issue on [GitHub Issues](https://github.com/Wandering-Spirit-22/portfolio/issues)
+-   📧 Contact the author(me): jatin1035520t@gmail.com 
 ---
 
-Built with ❤️ using Next.js and Tailwind CSS
+<div align="center">
+
+**⭐ Star this repo if you find it helpful or inspiring!**
+
+Made with ❤️ by [Wandering-Spirit-22](https://github.com/Wandering-Spirit-22)
+
+</div>
+
